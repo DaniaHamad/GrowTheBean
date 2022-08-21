@@ -1,0 +1,258 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://Game/MainGame/Main.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Clouds/FloatingClouds/cloud2.png" type="Texture" id=2]
+[ext_resource path="res://Game/Background/GoldPotBackground.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Fonts/FFFFORWA.TTF" type="DynamicFontData" id=4]
+[ext_resource path="res://Assets/Ground/Floor/platformPack_tile001.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Ground/Trees/Plants/foliagePack_018.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Background/backgroundForest.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Ground/Trees/Trunks/foliagePack_022.png" type="Texture" id=8]
+[ext_resource path="res://Assets/UI/flatDark24.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Clouds/FloatingClouds/cloud5.png" type="Texture" id=10]
+[ext_resource path="res://Assets/UI/flatLight23.png" type="Texture" id=11]
+
+[sub_resource type="TileSet" id=1]
+0/name = "platformPack_tile001.png 0"
+0/texture = ExtResource( 5 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 64, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "platformPack_tile001.png 1"
+1/texture = ExtResource( 5 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 32, 64, 32 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+
+[sub_resource type="DynamicFont" id=7]
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.0745098, 0.254902, 0.254902, 1 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.0745098, 0.254902, 0.254902, 1 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.133333, 0.4, 0.4, 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 38
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.176471, 0.533333, 0.176471, 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.176471, 0.533333, 0.176471, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 0.176471, 0.533333, 0.176471, 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 32
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.0745098, 0.254902, 0.254902, 1 )
+
+[node name="MainBakground" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 720.0, -1136.0 ],
+"_edit_vertical_guides_": [ 1280.0 ]
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_top = -1136.0
+margin_right = 1280.0
+margin_bottom = -72.0
+color = Color( 0.811765, 0.937255, 0.988235, 1 )
+
+[node name="BackgroundForest" type="TextureRect" parent="."]
+margin_left = -88.0
+margin_top = -176.0
+margin_right = 1384.0
+margin_bottom = 848.0
+texture = ExtResource( 7 )
+stretch_mode = 2
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 64, 32 )
+format = 1
+tile_data = PoolIntArray( 1310720, 0, 0, 1310721, 0, 0, 1310722, 0, 0, 1310723, 0, 0, 1310724, 0, 0, 1310725, 0, 0, 1310726, 0, 0, 1310727, 0, 0, 1310728, 0, 0, 1310729, 0, 0, 1310730, 0, 0, 1310731, 0, 0, 1310732, 0, 0, 1310733, 0, 0, 1310734, 0, 0, 1310735, 0, 0, 1310736, 0, 0, 1310737, 0, 0, 1310738, 0, 0, 1310739, 0, 0, 1376256, 1, 0, 1376257, 1, 0, 1376258, 1, 0, 1376259, 1, 0, 1376260, 1, 0, 1376261, 1, 0, 1376262, 1, 0, 1376263, 1, 0, 1376264, 1, 0, 1376265, 1, 0, 1376266, 1, 0, 1376267, 1, 0, 1376268, 1, 0, 1376269, 1, 0, 1376270, 1, 0, 1376271, 1, 0, 1376272, 1, 0, 1376273, 1, 0, 1376274, 1, 0, 1376275, 1, 0, 1441792, 1, 0, 1441793, 1, 0, 1441794, 1, 0, 1441795, 1, 0, 1441796, 1, 0, 1441797, 1, 0, 1441798, 1, 0, 1441799, 1, 0, 1441800, 1, 0, 1441801, 1, 0, 1441802, 1, 0, 1441803, 1, 0, 1441804, 1, 0, 1441805, 1, 0, 1441806, 1, 0, 1441807, 1, 0, 1441808, 1, 0, 1441809, 1, 0, 1441810, 1, 0, 1441811, 1, 0 )
+
+[node name="SunnyBackground" parent="." instance=ExtResource( 3 )]
+position = Vector2( 0, -1136 )
+
+[node name="Cloud2" type="TextureRect" parent="."]
+margin_left = 1040.0
+margin_top = -312.0
+margin_right = 1240.0
+margin_bottom = -187.0
+texture = ExtResource( 2 )
+
+[node name="Cloud5" type="TextureRect" parent="."]
+margin_top = -176.0
+margin_right = 238.0
+margin_bottom = -41.0
+texture = ExtResource( 10 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 1110, 600 )
+current = true
+limit_left = 0
+limit_top = -1136
+limit_right = 1280
+limit_bottom = 720
+limit_smoothed = true
+smoothing_enabled = true
+
+[node name="BabyPlant" type="TextureRect" parent="."]
+margin_left = 1080.0
+margin_top = 600.0
+margin_right = 1132.0
+margin_bottom = 645.0
+texture = ExtResource( 6 )
+
+[node name="Plant" type="TextureRect" parent="."]
+visible = false
+modulate = Color( 0.690196, 1, 0.207843, 1 )
+self_modulate = Color( 0.72549, 1, 0.517647, 1 )
+margin_left = 1088.0
+margin_top = 504.0
+margin_right = 1130.0
+margin_bottom = 642.0
+texture = ExtResource( 8 )
+expand = true
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Plant"]
+position = Vector2( 22, 96 )
+remote_path = NodePath("../../Camera2D")
+
+[node name="MainMenu" type="YSort" parent="."]
+visible = false
+
+[node name="Start" type="Button" parent="MainMenu"]
+margin_left = 596.0
+margin_top = 403.0
+margin_right = 752.0
+margin_bottom = 487.0
+custom_fonts/font = SubResource( 7 )
+custom_styles/hover = SubResource( 11 )
+custom_styles/pressed = SubResource( 8 )
+custom_styles/normal = SubResource( 9 )
+text = "Start"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Title" type="Label" parent="MainMenu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 117.0
+margin_top = 170.0
+margin_right = 1163.0
+margin_bottom = 330.0
+custom_fonts/font = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "Grow the bean!
+Talk to the plant and reach the gold above!"
+align = 1
+valign = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="EnterButton" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2( 1176, 104 )
+normal = ExtResource( 11 )
+pressed = ExtResource( 9 )
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer"]
+margin_left = 16.0
+margin_top = 112.0
+margin_right = 1048.0
+margin_bottom = 184.0
+custom_colors/cursor_color = Color( 1, 0, 0, 1 )
+custom_colors/clear_button_color_pressed = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+max_length = 40
+clear_button_enabled = true
+placeholder_text = "Talk to the plant"
+
+[node name="PlantResponse" type="Label" parent="CanvasLayer"]
+margin_left = 528.0
+margin_top = 464.0
+margin_right = 1040.0
+margin_bottom = 508.0
+custom_colors/font_color = Color( 0.133333, 0.4, 0.4, 1 )
+custom_fonts/font = SubResource( 6 )
+align = 1
+valign = 1
+
+[node name="CongratsCanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Retry" type="Button" parent="CongratsCanvasLayer"]
+margin_left = 596.0
+margin_top = 403.0
+margin_right = 752.0
+margin_bottom = 487.0
+custom_fonts/font = SubResource( 7 )
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 8 )
+custom_styles/normal = SubResource( 9 )
+text = "Retry"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Congrats" type="Label" parent="CongratsCanvasLayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -523.0
+margin_top = -190.0
+margin_right = 523.0
+margin_bottom = -30.0
+custom_fonts/font = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "Congratiolations!
+You have reached the gold!"
+align = 1
+valign = 1
+
+[connection signal="pressed" from="MainMenu/Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="CanvasLayer/EnterButton" to="." method="_on_EnterButton_pressed"]
+[connection signal="text_entered" from="CanvasLayer/LineEdit" to="." method="_on_LineEdit_text_entered"]
+[connection signal="pressed" from="CongratsCanvasLayer/Retry" to="." method="_ready"]

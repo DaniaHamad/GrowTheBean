@@ -1,0 +1,202 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Assets/Clouds/BackgroundClouds/cloudLayer1.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Clouds/BackgroundClouds/cloudLayer2.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Clouds/BackgroundClouds/cloudLayerB1.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Clouds/FloatingClouds/cloud3.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Clouds/FloatingClouds/cloud2.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Clouds/FloatingClouds/cloud6.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Clouds/FloatingClouds/cloud4.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Clouds/FloatingClouds/cloud7.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Clouds/FloatingClouds/cloud9.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Clouds/FloatingClouds/cloud8.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Clouds/FloatingClouds/cloud1.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Clouds/FloatingClouds/cloud5.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Rewards/medalGold.png" type="Texture" id=13]
+
+[node name="SunnyBackground" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1280.0
+margin_bottom = 392.0
+size_flags_horizontal = 4
+size_flags_vertical = 12
+color = Color( 0.811765, 0.937255, 0.988235, 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color( 0.796078, 0.972549, 0.964706, 1 )
+margin_right = 1280.0
+margin_bottom = 400.0
+texture = ExtResource( 1 )
+stretch_mode = 2
+
+[node name="CloudLayerB1" type="TextureRect" parent="."]
+modulate = Color( 0.92549, 0.956863, 0.956863, 1 )
+margin_top = 40.0
+margin_right = 1280.0
+margin_bottom = 440.0
+texture = ExtResource( 3 )
+stretch_mode = 2
+
+[node name="CloudLayer2" type="TextureRect" parent="."]
+margin_top = 205.0
+margin_right = 1280.0
+margin_bottom = 605.0
+texture = ExtResource( 2 )
+stretch_mode = 2
+
+[node name="YSort" type="YSort" parent="."]
+position = Vector2( -616, -32 )
+
+[node name="MedalGold2" type="TextureRect" parent="YSort"]
+margin_left = 904.0
+margin_top = 536.0
+margin_right = 1018.0
+margin_bottom = 655.0
+rect_pivot_offset = Vector2( -1400, -608 )
+texture = ExtResource( 13 )
+
+[node name="MedalGold3" type="TextureRect" parent="YSort"]
+margin_left = 936.0
+margin_top = 496.0
+margin_right = 1050.0
+margin_bottom = 615.0
+rect_pivot_offset = Vector2( -1432, -568 )
+texture = ExtResource( 13 )
+
+[node name="MedalGold" type="TextureRect" parent="YSort"]
+margin_left = 1024.0
+margin_top = 464.0
+margin_right = 1138.0
+margin_bottom = 583.0
+rect_pivot_offset = Vector2( -1520, -536 )
+texture = ExtResource( 13 )
+
+[node name="MedalGold4" type="TextureRect" parent="YSort"]
+margin_left = 1088.0
+margin_top = 504.0
+margin_right = 1202.0
+margin_bottom = 623.0
+rect_pivot_offset = Vector2( -1584, -576 )
+texture = ExtResource( 13 )
+
+[node name="MedalGold5" type="TextureRect" parent="YSort"]
+margin_left = 760.0
+margin_top = 528.0
+margin_right = 874.0
+margin_bottom = 647.0
+texture = ExtResource( 13 )
+
+[node name="MedalGold6" type="TextureRect" parent="YSort"]
+margin_left = 672.0
+margin_top = 496.0
+margin_right = 786.0
+margin_bottom = 615.0
+texture = ExtResource( 13 )
+
+[node name="MedalGold7" type="TextureRect" parent="YSort"]
+margin_left = 760.0
+margin_top = 464.0
+margin_right = 874.0
+margin_bottom = 583.0
+texture = ExtResource( 13 )
+
+[node name="MedalGold8" type="TextureRect" parent="YSort"]
+margin_left = 824.0
+margin_top = 504.0
+margin_right = 938.0
+margin_bottom = 623.0
+texture = ExtResource( 13 )
+
+[node name="MedalGold9" type="TextureRect" parent="YSort"]
+margin_left = 896.0
+margin_top = 440.0
+margin_right = 1010.0
+margin_bottom = 559.0
+texture = ExtResource( 13 )
+
+[node name="MedalGold10" type="TextureRect" parent="YSort"]
+margin_left = 816.0
+margin_top = 416.0
+margin_right = 930.0
+margin_bottom = 535.0
+texture = ExtResource( 13 )
+
+[node name="MedalGold11" type="TextureRect" parent="YSort"]
+margin_left = 896.0
+margin_top = 368.0
+margin_right = 1010.0
+margin_bottom = 487.0
+texture = ExtResource( 13 )
+
+[node name="MedalGold12" type="TextureRect" parent="YSort"]
+margin_left = 984.0
+margin_top = 400.0
+margin_right = 1098.0
+margin_bottom = 519.0
+texture = ExtResource( 13 )
+
+[node name="YSort2" type="YSort" parent="."]
+
+[node name="Cloud2" type="TextureRect" parent="YSort2"]
+margin_left = 64.0
+margin_top = 528.0
+margin_right = 264.0
+margin_bottom = 653.0
+texture = ExtResource( 5 )
+
+[node name="Cloud1" type="TextureRect" parent="YSort2"]
+margin_left = -56.0
+margin_top = 528.0
+margin_right = 134.0
+margin_bottom = 655.0
+texture = ExtResource( 11 )
+
+[node name="Cloud3" type="TextureRect" parent="YSort2"]
+margin_left = 232.0
+margin_top = 552.0
+margin_right = 409.0
+margin_bottom = 673.0
+texture = ExtResource( 4 )
+
+[node name="Cloud4" type="TextureRect" parent="YSort2"]
+margin_left = 344.0
+margin_top = 528.0
+margin_right = 572.0
+margin_bottom = 652.0
+texture = ExtResource( 7 )
+
+[node name="Cloud5" type="TextureRect" parent="YSort2"]
+margin_left = 504.0
+margin_top = 552.0
+margin_right = 742.0
+margin_bottom = 687.0
+texture = ExtResource( 12 )
+
+[node name="Cloud6" type="TextureRect" parent="YSort2"]
+margin_left = 640.0
+margin_top = 528.0
+margin_right = 906.0
+margin_bottom = 666.0
+texture = ExtResource( 6 )
+
+[node name="Cloud7" type="TextureRect" parent="YSort2"]
+margin_left = 832.0
+margin_top = 568.0
+margin_right = 1066.0
+margin_bottom = 686.0
+texture = ExtResource( 8 )
+
+[node name="Cloud8" type="TextureRect" parent="YSort2"]
+margin_left = 968.0
+margin_top = 544.0
+margin_right = 1178.0
+margin_bottom = 663.0
+texture = ExtResource( 10 )
+
+[node name="Cloud9" type="TextureRect" parent="YSort2"]
+margin_left = 1112.0
+margin_top = 544.0
+margin_right = 1325.0
+margin_bottom = 663.0
+texture = ExtResource( 9 )
