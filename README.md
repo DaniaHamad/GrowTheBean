@@ -1,7 +1,9 @@
 # GrowTheBean
 A simple talking to the plant game made during Kenny Jam 2022 using the Godot engine.
 
-This game was made in 3 hours, due to technical issues, I couldn't submit it on time, so I'll upload it here.
+This game was made in 3 hours.
+
+Due to technical issues, I couldn't submit it on time, so I'll upload it here.
 
 The main objective is to reach the sky to get the gold by talking to the plant and get it grow.
 
