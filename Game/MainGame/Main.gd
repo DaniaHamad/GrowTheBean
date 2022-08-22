@@ -51,7 +51,7 @@ func _on_LineEdit_text_entered(text_entered_by_user):
 		text_entered_by_user = text_entered_by_user.replace(c,"")
 	var words_entered = text_entered_by_user.rsplit(" ")
 	for word in words_entered:
-		word.to_lower()
+		word = str(word).to_lower()
 		if negative_words.has(word):
 			negative_points+=1
 		elif positive_words.has(word):
