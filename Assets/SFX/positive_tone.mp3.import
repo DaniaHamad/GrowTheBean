@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/positive_tone.mp3-6ff616e6be42813b49a0c0580ca5281d.mp3str"
+
+[deps]
+
+source_file="res://Assets/SFX/positive_tone.mp3"
+dest_files=[ "res://.import/positive_tone.mp3-6ff616e6be42813b49a0c0580ca5281d.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

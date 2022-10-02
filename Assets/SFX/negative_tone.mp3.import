@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/negative_tone.mp3-c42d7b3e13408bbd61a49824d2815d0b.mp3str"
+
+[deps]
+
+source_file="res://Assets/SFX/negative_tone.mp3"
+dest_files=[ "res://.import/negative_tone.mp3-c42d7b3e13408bbd61a49824d2815d0b.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

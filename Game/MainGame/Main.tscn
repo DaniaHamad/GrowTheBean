@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Game/MainGame/Main.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Background/Clouds/FloatingClouds/cloud2.png" type="Texture" id=2]
@@ -11,6 +11,11 @@
 [ext_resource path="res://Assets/UI/flatDark24.png" type="Texture" id=9]
 [ext_resource path="res://Assets/Background/Clouds/FloatingClouds/cloud5.png" type="Texture" id=10]
 [ext_resource path="res://Assets/UI/flatLight23.png" type="Texture" id=11]
+[ext_resource path="res://Assets/SFX/positive_tone.mp3" type="AudioStream" id=12]
+[ext_resource path="res://Assets/UI/flatLight45.png" type="Texture" id=13]
+[ext_resource path="res://Assets/UI/flatDark46.png" type="Texture" id=14]
+[ext_resource path="res://Assets/SFX/negative_tone.mp3" type="AudioStream" id=15]
+[ext_resource path="res://Assets/SFX/sunny_day.mp3" type="AudioStream" id=16]
 
 [sub_resource type="TileSet" id=1]
 0/name = "platformPack_tile001.png 0"
@@ -59,19 +64,23 @@ size = 38
 font_data = ExtResource( 4 )
 
 [sub_resource type="StyleBoxFlat" id=5]
-bg_color = Color( 0.176471, 0.533333, 0.176471, 1 )
+bg_color = Color( 0.501961, 0.709804, 0.172549, 1 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 32
 font_data = ExtResource( 4 )
 
 [sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0.176471, 0.533333, 0.176471, 1 )
+bg_color = Color( 0.501961, 0.745098, 0.121569, 0.913725 )
 border_width_left = 5
 border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
-border_color = Color( 0.176471, 0.533333, 0.176471, 1 )
+border_color = Color( 0.462745, 0.686275, 0.109804, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="DynamicFont" id=6]
 size = 32
@@ -193,7 +202,7 @@ valign = 1
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="EnterButton" type="TouchScreenButton" parent="CanvasLayer"]
-position = Vector2( 1166, 104 )
+position = Vector2( 1088, 104 )
 normal = ExtResource( 11 )
 pressed = ExtResource( 9 )
 
@@ -254,7 +263,22 @@ You have reached the gold!"
 align = 1
 valign = 1
 
+[node name="QuitButton" type="TouchScreenButton" parent="."]
+position = Vector2( 1192, 8 )
+normal = ExtResource( 13 )
+pressed = ExtResource( 14 )
+
+[node name="NegativeTonePlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+
+[node name="PositiveTonePlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+
+[node name="BackgroundPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 16 )
+
 [connection signal="pressed" from="MainMenu/Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="CanvasLayer/EnterButton" to="." method="_on_EnterButton_pressed"]
 [connection signal="text_entered" from="CanvasLayer/LineEdit" to="." method="_on_LineEdit_text_entered"]
 [connection signal="pressed" from="CongratsCanvasLayer/Retry" to="." method="_ready"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]

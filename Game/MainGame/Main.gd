@@ -11,6 +11,10 @@ onready var plant_response = $CanvasLayer/PlantResponse
 onready var canvas_layer = $CanvasLayer
 onready var congrats_canvas_layer = $CongratsCanvasLayer
 
+onready var postive_tone_player = $PositiveTonePlayer
+onready var negative_tone_player = $NegativeTonePlayer
+onready var background_player = $BackgroundPlayer
+
 var positive_words
 var negative_words
 
@@ -20,7 +24,9 @@ var plant_level=1
 
 var unwanted_chars = [".",",",":","?","!",";" ]
 
+
 func _ready():
+	background_player.play()
 	main_menu.show()
 	canvas_layer.hide()
 	congrats_canvas_layer.hide()
@@ -55,7 +61,6 @@ func _on_LineEdit_text_entered(text_entered_by_user):
 		if negative_words.has(word):
 			negative_points+=1
 		elif positive_words.has(word):
-			print(positive_words.find(word))
 			positive_words.remove(positive_words.find(word))
 			positive_points+=1
 	if positive_points>negative_points:
@@ -67,6 +72,7 @@ func _on_LineEdit_text_entered(text_entered_by_user):
 
 
 func _grow_plant():
+	postive_tone_player.play()
 	plant_level+=1
 	baby_plant.hide()
 	plant.show()
@@ -78,14 +84,18 @@ func _grow_plant():
 		_won_the_game()
 
 func _shrink_plant():
+	negative_tone_player.play()
 	if plant_level>1:
 		plant_level-=1
 		plant.rect_size.y -=50
 		plant.rect_position.y +=50
+		plant_response.text= "The plant is sadly shrinking"
 	elif plant_level==1:
 		plant.rect_size.y =138
 		plant.rect_position.y =504
-	plant_response.text= "The plant is sadly shrinking"
+		plant_response.text= "The plant is sad"
+		baby_plant.show()
+		plant.hide()
 	line_edit.clear()
 	
 	
@@ -105,3 +115,7 @@ func _on_EnterButton_pressed():
 func _on_Start_pressed():
 	main_menu.hide()
 	canvas_layer.show()
+
+
+func _on_QuitButton_pressed():
+	get_tree().quit() 

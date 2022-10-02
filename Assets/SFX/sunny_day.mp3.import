@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sunny_day.mp3-c9075dfa42bce2104d5d459075a57b1b.mp3str"
+
+[deps]
+
+source_file="res://Assets/SFX/sunny_day.mp3"
+dest_files=[ "res://.import/sunny_day.mp3-c9075dfa42bce2104d5d459075a57b1b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -13,8 +13,10 @@ config_version=4
 config/name="Grow the Bean"
 run/main_scene="res://Game/MainGame/Main.tscn"
 boot_splash/image="res://GJsplash.png"
+boot_splash/fullsize=false
+boot_splash/use_filter=false
 boot_splash/bg_color=Color( 1, 1, 1, 1 )
-config/icon="res://Assets/Ground/Trees/Plants/foliagePack_018.png"
+config/icon="res://Assets/Icons/foliagePack_018 1.png"
 config/windows_native_icon="res://GrowTheBeanIcon.ico"
 
 [display]
