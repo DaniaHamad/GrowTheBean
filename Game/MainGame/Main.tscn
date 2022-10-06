@@ -263,11 +263,6 @@ You have reached the gold!"
 align = 1
 valign = 1
 
-[node name="QuitButton" type="TouchScreenButton" parent="."]
-position = Vector2( 1192, 8 )
-normal = ExtResource( 13 )
-pressed = ExtResource( 14 )
-
 [node name="NegativeTonePlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 15 )
 
@@ -277,8 +272,15 @@ stream = ExtResource( 12 )
 [node name="BackgroundPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 16 )
 
+[node name="QuitLayer" type="CanvasLayer" parent="."]
+
+[node name="QuitButton" type="TouchScreenButton" parent="QuitLayer"]
+position = Vector2( 1192, 8 )
+normal = ExtResource( 13 )
+pressed = ExtResource( 14 )
+
 [connection signal="pressed" from="MainMenu/Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="CanvasLayer/EnterButton" to="." method="_on_EnterButton_pressed"]
 [connection signal="text_entered" from="CanvasLayer/LineEdit" to="." method="_on_LineEdit_text_entered"]
 [connection signal="pressed" from="CongratsCanvasLayer/Retry" to="." method="_ready"]
-[connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]
+[connection signal="pressed" from="QuitLayer/QuitButton" to="." method="_on_QuitButton_pressed"]

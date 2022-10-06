@@ -4,6 +4,7 @@ onready var baby_plant = $BabyPlant
 onready var plant = $Plant
 onready var line_edit = $CanvasLayer/LineEdit
 onready var enter_button = $CanvasLayer/EnterButton
+onready var quit_button = $QuitLayer/QuitButton
 
 onready var start = $MainMenu/Start
 onready var main_menu = $MainMenu
@@ -26,6 +27,8 @@ var unwanted_chars = [".",",",":","?","!",";" ]
 
 
 func _ready():
+	if OS.get_name() =="HTML5":
+		quit_button.hide()
 	background_player.play()
 	main_menu.show()
 	canvas_layer.hide()
