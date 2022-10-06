@@ -9,7 +9,7 @@ The main objective is to reach the gold by talking to the plant and get it grow 
 
 ## Download
 
-SOON
+https://daniahamad.itch.io/grow-the-bean
 
 ## Hints
 - Talk positively: the plant will grow. The positive words that has been already used will not effect the plant.
